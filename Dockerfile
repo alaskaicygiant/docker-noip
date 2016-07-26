@@ -19,5 +19,3 @@ RUN export BUILD_DEPS="tar \
     && cp noip2 /bin/noip2 \
   	&& apk del ${BUILD_DEPS} \
     && rm -rf /var/cache/apk/* /tmp/noip*
-
-ENTRYPOINT ["/bin/noip2"]

@@ -20,4 +20,4 @@ RUN export BUILD_DEPS="tar \
   	&& apk del ${BUILD_DEPS} \
     && rm -rf /var/cache/apk/* /tmp/noip*
 
-ENTRYPOINT ["/bin/noip2", "-u", "$NOIP_USER", "-p", "$NOIP_PW", "-U", "$NOIP_INT"]
+ENTRYPOINT ["/bin/noip2"]

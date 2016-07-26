@@ -2,10 +2,6 @@ FROM alpine:3.3
 
 MAINTAINER Owen Ouyang <owen.ouyang@live.com>
 
-ENV NOIP_USER=xxx 
-ENV NOIP_PW=XXX
-ENV NOIP_INT=30m
-
 RUN export BUILD_DEPS="tar \
                 build-base \
                 wget" \
@@ -19,3 +15,5 @@ RUN export BUILD_DEPS="tar \
     && cp noip2 /bin/noip2 \
   	&& apk del ${BUILD_DEPS} \
     && rm -rf /var/cache/apk/* /tmp/noip*
+
+ENTRYPOINT ["/bin/noip2"]
